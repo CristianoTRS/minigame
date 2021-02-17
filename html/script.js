@@ -76,6 +76,7 @@ $(() => {
                 $('.pin').map((index, value) => {
                     const element = $(value);
                     const id = element[0].id;
+                    element.css('left', '0px');
                     goals.map((value, index) => {
                         if (value.id == id) {
                             GetAssignedGoal(id, goalValue => {
@@ -90,5 +91,13 @@ $(() => {
         } else if (e.data.action == 'hide') {
             $('body').hide();
         }
+
+        $('body').keydown(e => {
+            if (e.which == 8 || e.which == 27) {
+                $.post('https://minigame/close', JSON.stringify({}));
+                $('body').hide();
+            }
+        })
+
     })
 })
