@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainContainer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: 750px;
+    width: 500px;
+    background-color: #276FBF;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #183059;
+}
+
+.pin {
+    height: 100%;
+    width: calc(500px / 4);
+    background-color: black;
+    margin: 5px;
+    border: 2.5px solid black;
+}
