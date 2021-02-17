@@ -1,0 +1,2 @@
+# minigame
+Minigame for FiveM
