@@ -64,7 +64,9 @@ $(() => {
                     const id = element[0].id;
                     GetAssignedGoal(id, goalValue => {
                         const distanceToGoal = GetPinDistanceToGoal(element, goalValue);
-                        element.css('backgroundColor', `rgb(${255 - distanceToGoal}, ${255 - distanceToGoal}, ${255 - distanceToGoal})`);
+                        var mColor = distanceToGoal / 2;
+                        if (mColor > 150) { mColor = 150 };
+                        element.css('backgroundColor', `rgb(${255 - mColor}, ${255 - mColor}, ${255 - mColor})`);
                         ChangeIsRightValue(id, distanceToGoal < limit ? true : false);
                     });
                 }
@@ -81,7 +83,9 @@ $(() => {
                         if (value.id == id) {
                             GetAssignedGoal(id, goalValue => {
                                 const distanceToGoal = GetPinDistanceToGoal(element, goalValue);
-                                element.css('backgroundColor', `rgb(${255 - distanceToGoal}, ${255 - distanceToGoal}, ${255 - distanceToGoal})`)
+                                var mColor = distanceToGoal / 2;
+                                if (mColor > 150) { mColor = 150 };
+                                element.css('backgroundColor', `rgb(${255 - mColor}, ${255 - mColor}, ${255 - mColor})`);
                             })
                         }
                     })
