@@ -10,16 +10,27 @@ body {
     top: 50%;
     height: 750px;
     width: 500px;
-    background-color: #276FBF;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    border: 5px solid #183059;
+    border: 2px solid white;
+    border-radius: 32px;
 }
 
 .pin {
     height: 100%;
-    width: calc(500px / 4);
+    width: calc(500px /6);
     background-color: black;
     margin: 5px;
     border: 2.5px solid black;
+    border-radius: 26px;
+    margin-left: 10px;
+}
+
+.pin:first-child {
+    margin-top: 10px;
+}
+
+.pin:last-child {
+    margin-bottom: 10px;
 }
